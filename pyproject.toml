@@ -1,0 +1,8 @@
+[project]
+name = "test-app"
+version = "0.1.0"
+description = "A short description of my project"
+readme = "README.md"
+dependencies = [
+    "django==5.2.11",
+]
