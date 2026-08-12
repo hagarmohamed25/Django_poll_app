@@ -6,3 +6,8 @@ readme = "README.md"
 dependencies = [
     "django==5.2.11",
 ]
+
+[dependency-groups]
+dev = [
+    "django-debug-toolbar>=7.1.0",
+]
