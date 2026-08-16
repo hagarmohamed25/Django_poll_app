@@ -1,20 +1,22 @@
+{% load static tailwind_tags %}
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" class="h-full w-full">
   <head>
     <meta charset="utf-8" />
     {% load static %}
 
 <link rel="stylesheet" href="{% static 'polls/style.css' %}">
-<img src="{% static 'polls/images/background.jpg' %}">
+<!--<img class="w-full" src="{% static 'polls/images/background.jpg' %}">-->
     <title>My test page</title>
+    {% tailwind_css %}
 
   </head>
-  <body>
+  <body class="h-full">
 
     {% if latest_question_list %}
-    <ul>
+    <ul class="p-16">
     {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a></li>
+        <li><a class="text-7xl !text-rose-500" href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a></li>
         {% endfor %}
     </ul>
     {% else %}
